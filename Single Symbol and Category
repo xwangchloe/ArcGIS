@@ -1,0 +1,38 @@
+1.	To select a record, click the record selector (gray box) at the far left of the table. To select multiple continuous rows, you can either drag your cursor down, or you can click on the first row and the hold the shift-key and click on the last row. Hold down the control key and click to select multiple non-consecutive records.
+2.	Create Layer from Selected Features: Right-click Counties layer to Selection and click Create Layer from Selected Features.  This does not create a new shapefile, just makes a copy, keeping only the selected.
+3.	Symbolize by Features: 
+  1)	Double-click Counties to open Layer Properties window.  Click Symbology tab.  Can also click on feature symbol.
+  2)	Select Features: Single Symbol in Show box and click symbol button.
+4.	Statistics of Data: In the Attribute Table, right-click the field for UINPCT99 and select Statistics; review the frequency distribution of the data. What is the min, max, mean?
+5.	Quantities: Graduated colors: 
+  1)	Double-click Counties layer to open Layer Properties window.  Click Symbology tab.  
+  2)	Select Quantities: Graduated Colors and choose a Value Field, Color Ramp, and Classification.  
+  3)	Check “show” box if want to use data values for the range
+  4)	Color ramp: Right-click color ramp and uncheck Graphic View for text description of color scheme. Select Properties… to customize color selection.
+  5)	Format label: Left-click Label to format number of zeros after the decimal point, pad with zeros, or change to %.  
+  6)	Data Classification: Choose Value = UINPCT99, Color = Cyan Lt to Blue Dark; Format Label to 2 decimal places; Note data min, max under Range; Click Classify. Click on the Break Values (right panel) to see how many data elements (ex. Counties) are in a class
+6.	Copy and Paste Layer: 
+  1)	In Table of Contents, right-click layer and select Copy.
+  2)	Go to the Edit drop-down menu and select Paste.
+7.	Equal Interval: Interval=(Max-Min)/Classes; Break Value (n+1) = Break Value (n) + Interval; each class (or color) represents the same data interval but different number of data elements. Because the # of elements can vary, this is a good method for identifying outliers
+8.	Quantile: Creates classes containing equal numbers of elements. 3 classes= tertiles; 4 classes = quartiles; 5 classes = quintiles. The data interval varies from class to class and is calculated by break value 2 minus break value 1. This is a good method for comparing 2 different attributes because you have the same number of elements in each range
+9.	Manual Breaks: Click on value under RANGE to change breaks. Change labels: Left-click on the text under the Labels column that you want to change and type over.  
+10.	Natural Breaks: Default method in ArcGIS. Creates classes according to clusters and gaps in the data. Class breaks are identified that best group similar values and that maximize the differences between classes. The features are divided into classes whose boundaries are set where there are relatively big differences in the data values. Natural breaks are data-specific classifications and not useful for comparing multiple maps built from different underlying information.
+11.	Quantities: Graduated Symbols: Useful if you want to be able to compare one attribute to another attribute that is already symbolized using graduated color. Steps:
+  1)	Paste a new layer. Label it “% Pop Unemployed”.
+  2)	Left click the Manual layer and rename “% Pop Uninsured”.
+  3)	Uncheck other layers.
+  4)	Open Symbology for % Pop Unemployed and change Quantities (on left) to Graduated Symbols.
+  5)	Change value to PCTUNEMP and Classes=5. Symbol Size: Change size: from 2 to 24; Template: Click to change symbol to red Circle 1; Background: Click to change to no color and outline. [Just FYI - Symbol: Click to flip symbols or change properties for all symbols.] Change classification to 5 Equal Intervals. Left-click Label heading to format as Percentage. Numeric Options: 2 decimal places. Pad with zeros.
+12.	Quantities: Dot Density: Copy and paste a new layer. Open Symbology, choose Dot Density under Quantities. Select Field you want to symbolize (PCTUNEMP), the dot size (3), and dot value = how many each dot represents (1). You can also change the color by double-clicking under Symbol.
+13.	Normalization:  1) Add a new Counties layer to your map from the InClass Folder. Copy and Paste a second layer. 2) Normalizing (dividing) population by area is equal to population density.
+14.	Symbolize by Category: 
+  1)	Open Layer Properties window.  Click Symbology tab.  
+  2)	Select Categories: Unique Values in Show box and choose a Value Field (ex. URBAN) and Color Ramp from the dropdown menu.  
+  3)	Uncheck box by <add other values> unless you are only interested in symbolizing a few categories  
+  4)	To select the values you want symbolized, use the Add All Values or Add Values (if you don’t want all). Select a value, then click Remove to delete.
+15.	Symbolize by Categories: 
+  1)	Select Categories: Unique Values, many fields in Show box to show combinations
+  2)	Choose up to 3 Value Fields  (ex. URBAN and HIGHPOV) ; Color Ramp assigns different color for each combination of data values
+  3)	Rename layer Urban and High Poverty
+16.	Missing Data: One way to handle missing data is to have your first range of your data classification be just for your missing data value and then label that color as Missing. Make sure you check the box for Show class ranges using feature values.
