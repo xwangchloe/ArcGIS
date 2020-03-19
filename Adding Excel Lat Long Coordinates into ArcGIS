@@ -1,0 +1,27 @@
+****************Note******************
+Refer to https://gisgeography.com/adding-excel-lat-long-coordinates-arcgis/
+******************************************
+
+######Convert degrees/minutes/seconds to decimal degrees
+Check the ArcGIS/Basic to Convert degrees/minutes/seconds to decimal degrees
+
+########Ensure data frame is set to your geographic coordinate system
+In ArcGIS, right-click the “Layers” data frame in the table of contents. Then, select properties for the data frame.
+In the coordinate system tab, expand geographic coordinate systems. Because GPS receivers use WGS84, click world and then select WGS 1984.
+Now, the data frame is set to ****WGS 1984****** geographic coordinate system.
+
+########Add Excel lat long coordinates table to ArcMap
+Now, add your excel data to ArcMap (file > add data).
+Navigate to your Excel spreadsheet and double-click the sheet with the lat long coordinates.
+This will add the Excel table to ArcGIS and appear in the table of contents.
+
+########Display XY Data
+Right click the table and select display XY data.
+    The X = longitude.
+    The Y = latitude.
+When you click OK, this will create an event layer in your map. But this is just a temporary layer that you need to make permanent.
+
+########Save as feature class
+As mentioned above, when you create an XY event layer, ArcGIS doesn’t save it to memory. Before you close your ArcGIS session, you need to create a feature class or shapefile.
+So right-click the event layer and export data (data > export data). Next, click “use the same coordinate system as the data layer”.
+Save the file. At this point, you permanently create a spatial file from an Excel spreadsheet.
