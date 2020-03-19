@@ -1,0 +1,44 @@
+1. Latitude and longitude in degrees, minutes, seconds, can be converted to decimal degrees using the following formula:
+Decimal value = Degrees + (Minutes/60) + (Seconds/3600)
+Eg: 25 degrees, 34 minutes, 12 seconds = 25 + (34/60) + (12/3600) = 25.57˚ (decimal=4~6)
+25.57˚: 0.57*60=34.2, 34 is the minute; 0.2*60=12, 12 is the second. Second as integer. 
+West and South: negative value, North and East: positive value
+2. After opening a .mxd file: Right-click on Major Cities, Data-> Repair Data Source. Select MajorCities from the data.
+3. Before using ArcMap, Customize-> Extensions (check all boxes)/Toolbars (check standard and tools)
+4. Use Advanced Sorting… to sort multiple fields in Attributable table.
+5. Shapefiles (=layers): >3 files, same name, different file extensions, stored in same folder. 
+  1)	The .shp file has the features’ geometry and coordinates. 
+  2)	The .sbx and .shx files contain indexes for speeding up searches and queries.
+  3)	The .shp.xml file has layer’s metadata (information about the layer). 
+  4)	The .dbf file has the feature attribute table in dBASE format and can be opened in Excel.
+  5)	The .prj file is a simple text file that has the map projection parameters of the layer.
+6.	What coordinate system a layer is in: Properties->Source tab
+7.	Data Frame Properties: Right-click data frame name->Properties ->Coordinate System tab. The CS can be defined before adding data. There you can select a different coordinate system from the Predefined folder.
+8.	Change units displayed on map: Data Frame Properties->General tab
+9.	Add a layer: 
+  1)	Click the yellow Add Data Button  in the menu bar.
+  2)	In the Add Data dialog box, browse to the L1LectureData folder.  Use the Connect to Folder Button to find it if necessary.
+  3)	Add Lakes.shp to the first data frame.
+10.	Unknown Spatial Reference: no .prj file when adding layer. Click OK. 
+11.	Change your data from a Geographic CS in decimal degrees to a Projected CS in units of distance. This is done using a projection. Only projecting a GCS will changes units from dd to distance (meters, feet). When a layer has a CS but you want to create a new shapefile with a different CS (i.e., from geographic to projected), you use the Project tool
+  1)	Geoprocessing->ArcToolbox-> Data Management->Projections and Transformations->Project;
+  2)	Activate the second data frame. (Although the date frame is projected, the data layers are not.)
+  3)	Open the Project tool to project MajorCities layer from Geographic to Projected CS.
+  4)	Name output shapefile MajorCities_Proj.shp and save it to your flash drive.
+  5)	For Output Coordinate System, click Select
+  6)	Open Projected CS, Continental, North America, and USA Contiguous Albers Equal Area Conic
+  7)	Add MajorCities_Proj, open Layer Properties, and click Source tab to see its coordinate system. (Note that the units are in meters (m) and that the Coordinate System is Projected)
+12.	Only use the define projection tool if the CS is unknown: (.prj file associated with shapefile created)
+  1)	Geoprocessing->ArcToolbox-> Data Management->Projections and Transformations->Define Projection;
+  2)	Activate the first data frame;
+  3)	Open the Define Projection tool and click the hand icon.
+  4)	You can select a coordinate system from the Geographic or Projected CS folders. If the layer has the same CS as an existing layer, expand the Layers folder and select the CS.
+13.	On-the-fly Projection: When two or more layers have different coordinates systems, ArcMap transforms the layers’ coordinates to match the first layer added. If the layer is in a PCS, ArcMap unprojects the x,y coordinates to the latitude-longitude coordinates, and then reprojects to the projection of the first layer. The on-the-fly transformations are NOT saved in ArcMap. The layer continues to have the same CS
+14.	Choices for projections at different scales are: Robinson projection for the world, Albers equal-area conic projection for the U.S., State Plane and Universal Tranverse Mercator (UTM) for state-level.
+15.	Exporting & Inserting maps:
+  1)	In the File menu, scroll down to Export Map.
+  2)	Find the folder you want to save the image to.
+  3)	Save as a JPEG file.
+  4)	In Word document, go to Insert Menu.
+  5)	Scroll down to Picture, follow arrow, and select From File.  
+  6)	Locate where you saved your image.
