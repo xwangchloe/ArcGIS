@@ -2,6 +2,15 @@
 Refer to https://gisgeography.com/adding-excel-lat-long-coordinates-arcgis/
 ******************************************
 
+Briefly:
+1. Convert degrees/minutes/seconds to decimal degrees
+2. Ensure data frame is set to WGS 1984
+3. Add Excel table to ArcMap
+4. Display XY Data
+5. Save as feature class
+
+
+
 ######Convert degrees/minutes/seconds to decimal degrees
 Check the ArcGIS/Basic to Convert degrees/minutes/seconds to decimal degrees
 
