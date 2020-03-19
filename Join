@@ -1,0 +1,36 @@
+*****Edit Data in Excel before join:
+1)	Extract the data to your lecture folder.
+2)	Open ACS_10_5YR_B25035_with_ann.csv in Excel.
+3)	Delete the 1st, 3rd, and 5th Columns that you don’t need (use control key) and the second Row.
+4)	Enter descriptive titles for the remaining columns: TRACT, YRBUILT. Note: Titles for columns of data files to be used in GIS cannot contain spaces or symbols, cannot start with a number, and must be <11 characters.
+5)	In the YRBUILT column, some values are left- justified and some are right-justified. Left justified indicates a text field, right-justified a numeric.
+6)	To ensure the data are all read into ArcMap as numeric, FIND ‘-’ and ‘+’, REPLACE with nothing
+7)	Save data as .csv file named YrBuilt.  (Can also add text files and dbf files to ArcMap.  Must close file in excel before adding it.)
+8)	Add the file YrBuilt.csv.  (Note that when you add a table, the Table of Contents changes from List by Drawing Order to List by Source)
+9)	Right-click to open table. There are 402 records.
+10)	Sort by YRBUILT. There are 11 <null> values.
+11)	Open the attribute table for Tracts003.  Note that there are also 402 records.
+********Join Attribute Data: 
+1)	Preparing Attribute Data: As the excel edition. 
+2)	Editing Attribute Data: edit the data in the attribute table of Tract003 to match the data format in the Year table by adding a new field. In Tract003, click Options, Add Field named TractNew, the type is Text, length=11, click OK.
+3)	Right-click the TractNew field name, and click Field Calculator. Check ‘Don’t warn me again’ and click Yes to continue.
+4)	In the field calculator, double-click STATE, click ‘&’, double-click COUNTY, click ‘&’, double-click TRACT.  Then click OK. The ‘&’ strings different fields of text together.
+5)	Add a new field to the Tract003 table named TractNum of type Long Integer, precision=11. 
+(Short Integer: precision ≤5; Long integer: billion; Float: 101038 (6 places past the decimal, percentages); Double: 101038 (15 places past the decimal, X, Y, Area…)
+6)	In the field calculator for TractNum, enter TractNew.
+7)	Right-click Tract003, click Joins and Relates, and click Join. Always start with the spatial data table (with the Shape field).
+8)	Join Attributes From a Table: Choose the TractNum field to join data to.
+9)	Choose the Year table to join to Tract003.
+10)	Choose the TRACT field in the Year table to join from. Click Ok.
+11)	Permanently Join Tables: Review the Tract003 attribute table to see your new joined data.  
+12)	To permanently save, the joined table must be exported. Right-click Tract003, scroll to Data, and Export. 
+13)	Save as MedianYrHousing.shp and click yes to add.  Open the attribute table.  Note that a field with the same name is appended with _1. Right-click heading TRACT_1 to delete duplicate. 
+14)	Right-click Tract003 to remove from your map.
+***************Notes to Join Attribute Data:
+1)	Use the Join Data tool when you want to merge two tables.
+2)	For records to be matched, tables need a common attribute.
+3)	The attribute fields do not need the same column names, but they must be in the same format, i.e., both text or numeric, and spelled the same in the data including capitalization.
+4)	REMEMBER: Text is left justified; numbers are right justified.
+5)	If numeric, can also convert data by subtracting, dividing, etc.
+6)	Something to look out for: Census tract fields may not be the same length.  This is because some census tracts have decimal places (6 digits total) while others do not (only 4 digits).
+7)	You can manipulate data to add zeros by using & “00”. Use double quotes.
