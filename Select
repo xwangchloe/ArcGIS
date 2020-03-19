@@ -1,0 +1,24 @@
+1.	TIGER (Topologically Integrated Geographic Encoding and Referencing system): Country->Region->State->Metropolitan area->County (Co) & City/Census Designated Place & Census Tract (CT) & Block Group (BG) & Block
+2.	Geographic Census Data Downloading:
+  1)	Go to www.census.gov/geography.html and select the Tiger Products, then Cartographic Boundary Shapefiles, and under State-based Files, choose Census Tract.
+  2)	Download the shapefile format of the 2010 Census file for Pennsylvania – state # = 42 (gz_2010_42_140_00_500k.zip).
+  3)	Click on Extract all Files at top of window.
+  4)	Add shapefile and rename PA_CT. What coordinate system does the shapefile have?
+3.	Selecting by Attribute:
+  1)	From the Selection dropdown menu at the top of the screen, click Select by Attributes. (This allows you to select features, in this case census tracts, based on data in your attribute table.)
+  2)	 Double-click COUNTY from the list of attribute names so that it appears in the empty box below.
+  3)	The County FIPS code for Allegheny Co, PA is 003. 
+  4)	 Type = ‘003’ (include single quotes) in the expression box. Get Unique Values lists all values.
+4.	Selecting by Location:
+  Using Select by Location lets you query your data using different spatial selection methods. (Read About select by location to learn about the different methods.) The Target layer is the layer you want to select features from. The Source layer is the layer your referring to in your query. You can use selected features in your Source layer for the query.
+  1)	Add PA_Counties.shp from the LectureData folder, select County 003 and turn on the layer PA_CT.
+  2)	In the Selection menu, click on Select by Location.
+  3)	Select target layer features from PA_CT that are within the source layer feature PA_Counties.
+  4)	Check box for Use selected features. 
+  5)	Spatial Selection: are within the source layer feature. (Have their centroid in the source layer feature is also a useful spatial select method). 
+  6)	Click apply. 
+  7)	Modify selection: In the Selection menu, click on Interactive Selection Method, and change to add to or Remove from Current Selection. Make sure you return the Interactive Selection Method to Add to Current Selection or Create New Selection when you’re done
+5.	Saving Shapefiles from Selection:
+  1)	Right-click PA_CT layer, scroll to Data and click Export data and Export: Selected Features.  
+  2)	Name the layer Tract003. Save as type Shapefile to a new folder. Click Yes to add exported data.
+  3)	Clear Selected, uncheck the PA_CT layer and zoom to the Tract003 layer.
