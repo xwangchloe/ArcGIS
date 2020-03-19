@@ -1,0 +1,9 @@
+************Missing Data
+1)	Clear selection. Add LeadCases.csv to the map, and open attribute table.  
+2)	Join the blood lead cases to MedianYrHousing.
+3)	Sort by YRBUILT field.  Note the null values are now zero.
+4)	Add a new short integer field MissingYr to indicate which Tracts are missing year data.  Select the Tracts with Zero values in Yrbuilt column and calculate MissingYr=1 for the selected.
+*************Legend Missing Data
+1)	Double-click ElevatedBPb to symbolize YRBUILT value.
+2)	Click Classify data. Click Exclusions, MissingYr=1. Classification Statistics will update if you close the Symbology window after making your exclusions, then open the window again, and reclassify with Equal Interval.
+3)	Data Exclusion Properties window Legend tab: Show symbol for excluded data. 
