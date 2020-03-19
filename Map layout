@@ -1,0 +1,30 @@
+******************Map layout***********************
+1.	Switch to Map Layout: 
+  1)	Go to Layout View by clicking bottom left of map.
+  2)	Change orientation: File menu -> Page and Print Setup, then click Landscape and Scale Map.
+  3)	Right-click map to Distribute -> Fit to Margins, and then click Full Extent
+2.	Adding Map Title:
+  1)	From Insert drop-down menu, click Title
+  2)	When prompted, insert space. Then double click on text block and type title. Title must include unit of geography, where and year.
+  3)	Resize map by dragging corners to fit title
+  4)	To edit, double click again: enter a <return> to separate lines of text if needed; click Change Symbol to edit font size.
+3.	Adding Map Legend: remember the missing data
+  1)	From Insert drop-down menu, click Legend
+  2)	Use arrows to move layers to and from legend
+  3)	Delete ‘Legend’ from legend title. Next to continue.
+  4)	Once created, double click for Legend Properties
+  5)	Click Select All, then Style button; use 1st style in 3rd row: Horizontal Single, Layer Name, and Label
+  6)	Select second layer and check button to place in new column
+  7)	Click Select All, then Font: Click Symbol and use dropdown menu to select font size: headings = 18; class labels=16. Both bold.
+  8)	Double click legend and click Layout tab. Change column gap to 20. Move Legend to below map.
+4.	Other map elements:
+  1)	From Insert drop-down menu, click North Arrow and select a style. Change size by expanding box.
+  2)	From Insert drop-down menu, click Scale Bar and select a style. Double click on scale bar to change units and number of divisions. Scale Bar must go beneath map.
+  3)	Left-click map to select, then right click to open Properties. Click Frame tab and select no border. Can also change background color.
+  4)	From File drop-down menu, go to Export Map.
+
+*****************Multiple Maps in a Layout**************************
+  1)	Insert a New Data Frame from the Insert drop-down menu. Drag the Multiple Race and Urban and High Poverty layers to the new data frame.
+  2)	Use Size and Position in Data Frame Properties to resize and reposition. Click Full Extent to enlarge map to fit frame. Eg: Position: X: 5.5 inch, Y: 0; Size: Width: 5.5 inch, Height: 7.3 inch. 
+  3)	Convert to Graphics > Ungroup > to edit legend: Note make sure you correct the dot number (1 Dot = 1)
+ 
