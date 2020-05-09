@@ -1,0 +1,18 @@
+************************************************************************************************************************
+Note: refer to https://desktop.arcgis.com/en/arcmap/10.3/map/working-with-layers/how-to-set-layer-transparency.htm
+*************************************************************************************************************************
+You can set layer transparency on the Display tab on the Layer Properties dialog box.
+
+Setting layer transparency on the Display tab
+You can also set layer transparency using the Effects toolbar as described in the following steps:
+
+Click Customize > Toolbars > Effects on the main menu.
+The Effects toolbar appears.
+
+Click the layer drop-down arrow and select the layer that you want to appear transparent.
+Click the Adjust Transparency button Adjust Transparency and drag the slider bar to adjust the transparency.
+Setting layer transparency using the Effects toolbar
+Tip:
+For layers using a single symbol or for layers displayed by category, you can set the transparency of individual features using field values to set percent transparency.
+You can set transparency for group layers. In these cases, it will take into account the transparency settings of each sublayer in the overall group layer transparency.
+Layer transparency is applied to all features in the layer with each transparent object knocking out previously drawn transparent features in the same layer. Therefore, transparent features in the same layer will not blend with each other.
